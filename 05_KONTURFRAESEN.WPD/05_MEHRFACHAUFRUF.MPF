@@ -1,0 +1,36 @@
+N1 E_HEAD(268443647,0,0,0,100,80,-15,71,17,1,10,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 Beginn: ;#SM;*RO*
+N3 ATRANS X25 Y15 Z0 ;#SM;*RO*
+N4 E_CON("WINKELKONTUR",1,"E_LAB_A_WINKELKONTUR","E_LAB_E_WINKELKONTUR");*RO*
+N5 E_CP_CO("FB_D6_VHM","",1,0.08,2,250,2,"202111131529250",513,,0,10,91,40,5,0,0,,,6,3,0,,,,,,0,,,,,1,,1,2,91);*RO*
+N6 Ende: ;#SM;*RO*
+N7 REPEAT Beginn Ende P=2 ;#SM;*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_WINKELKONTUR: ;#SM Z:2
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X0 Y-5 ; Konturanfang ;*GP*
+G1 X15 RND=5 ;*GP*
+Y25 RND=5 ;*GP*
+X5 RND=5 ;*GP*
+Y5 ;*GP*
+X-5 RND=5 ;*GP*
+Y-5 RND=5 ;*GP*
+X0 ;*GP*
+;CON,0,0.0000,7,7,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:0,EY:-5;*GP*;*RO*;*HD*
+;LR,EX:15;*GP*;*RO*;*HD*
+;R,RROUND:5;*GP*;*RO*;*HD*
+;LU,EY:25;*GP*;*RO*;*HD*
+;R,RROUND:5;*GP*;*RO*;*HD*
+;LL,EX:5;*GP*;*RO*;*HD*
+;R,RROUND:5;*GP*;*RO*;*HD*
+;LD,EY:5;*GP*;*RO*;*HD*
+;LL,EX:-5;*GP*;*RO*;*HD*
+;R,RROUND:5;*GP*;*RO*;*HD*
+;LD,EY:-5;*GP*;*RO*;*HD*
+;R,RROUND:5;*GP*;*RO*;*HD*
+;LR,EX:0;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_WINKELKONTUR:

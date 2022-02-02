@@ -1,0 +1,33 @@
+N1 E_HEAD(270540799,0,-40,1,100,80,-15,71,17,2,60,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 E_MI_PL("FP_D63_WSP","",1,0.1,2,200,2,9,1,90,0,90,5,0,0,90,-40,90,100,91,80,91,50,1,0);*RO*
+N3 E_CON("INNENKONTUR",1,"E_LAB_A_INNENKONTUR","E_LAB_E_INNENKONTUR");*RO*
+N4 E_CON("INSEL",1,"E_LAB_A_INSEL","E_LAB_E_INSEL");*RO*
+N5 E_CP_CO("FB_D6_VHM","",1,0.08,2,250,2,"202201251519150",513,,0,4,91,25,12,0,0,,,3,2,2,,,,,,0,,,,,1,,1,2,91);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_INNENKONTUR: ;#SM Z:2
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X45 Y0 ;*GP*
+G3 X25 Y-20 I=AC(25) J=AC(0) ;*GP*
+G1 X75 ;*GP*
+G3 X55 Y0 I=AC(75) J=AC(0) ;*GP*
+G1 X45 ;*GP*
+;CON,0,0.0000,4,4,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:45,EY:0;*GP*;*RO*;*HD*
+;ACCW,DIA:0/35,EX:25,EY:-20,RAD:20;*GP*;*RO*;*HD*
+;LR,EX:75;*GP*;*RO*;*HD*
+;ACCW,DIA:0/235,EX:55,EY:0,RAD:20;*GP*;*RO*;*HD*
+;LL,EX:45;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_INNENKONTUR:
+E_LAB_A_INSEL: ;#SM Z:4
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X65 Y0 ;*GP*
+G2 I=AC(75) J=AC(0) ;*GP*
+;CON,0,0.0000,1,1,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:65,EY:0;*GP*;*RO*;*HD*
+;ACW,DIA:0/14,EX:65,EY:0,CY:0,RAD:10;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_INSEL:

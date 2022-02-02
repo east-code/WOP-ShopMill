@@ -1,0 +1,24 @@
+N1 E_HEAD(269492223,0,0,0,100,80,-15,71,17,1,60,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 E_CON("AUSSENKONTUR",1,"E_LAB_A_AUSSENKONTUR","E_LAB_E_AUSSENKONTUR");*RO*
+N3 E_MI_CON("FS_D50_WP","",1,0.12,2,500,2,1,0,90,7,91,7,0.3,0,0,20,41,0,16,0.1,0,1,2,91,,);*RO*
+E_MI_CON("FS_D50_WP","",1,0.12,2,500,2,2,0,90,7,91,7,0.3,0,0,20,41,0,16,0.1,0,1,2,91,,);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_AUSSENKONTUR: ;#SM Z:2
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X16 Y16 ;*GP*
+G1 Y35 ;*GP*
+X50 Y65 ;*GP*
+X90 Y35 ;*GP*
+Y16 ;*GP*
+X16 ;*GP*
+;CON,0,0.0000,0,0,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:16,EY:16;*GP*;*RO*;*HD*
+;LU,DEY:19;*GP*;*RO*;*HD*
+;LA,EX:50,EY:65;*GP*;*RO*;*HD*
+;LA,EX:90,EY:35;*GP*;*RO*;*HD*
+;LD,EY:16;*GP*;*RO*;*HD*
+;LL,EX:16;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_AUSSENKONTUR:

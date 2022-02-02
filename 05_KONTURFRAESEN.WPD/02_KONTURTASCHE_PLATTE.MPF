@@ -1,0 +1,33 @@
+N1 E_HEAD(268443647,-50,-10,0,100,80,-15,71,17,1,30,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 E_CON("INNENKONTUR",1,"E_LAB_A_INNENKONTUR","E_LAB_E_INNENKONTUR");*RO*
+N3 E_CP_CO("FB_D16","",1,0.08,2,250,2,"202110111932090",513,,0,10,91,40,5,0,0,,,3,2,2,,,,,,0,,,,,1,,1,2,91);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_INNENKONTUR: ;#SM Z:4
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X0 Y0 ; Konturanfangspunkt ;*GP*
+G1 X45 RND=20 ;*GP*
+Y30 RND=8 ;*GP*
+X25 Y65 RND=8 ;*GP*
+X-25 RND=8 ;*GP*
+X-45 Y30 RND=8 ;*GP*
+Y0 RND=20 ;*GP*
+X0 ;*GP*
+;CON,0,0.0000,5,5,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:0,EY:0;*GP*;*RO*;*HD*
+;LR,EX:45;*GP*;*RO*;*HD*
+;R,RROUND:20;*GP*;*RO*;*HD*
+;LU,EY:30;*GP*;*RO*;*HD*
+;R,RROUND:8;*GP*;*RO*;*HD*
+;LA,EX:25,EY:65;*GP*;*RO*;*HD*
+;R,RROUND:8;*GP*;*RO*;*HD*
+;LL,EX:-25;*GP*;*RO*;*HD*
+;R,RROUND:8;*GP*;*RO*;*HD*
+;LA,EX:-45,EY:30;*GP*;*RO*;*HD*
+;R,RROUND:8;*GP*;*RO*;*HD*
+;LD,EY:0;*GP*;*RO*;*HD*
+;R,RROUND:20;*GP*;*RO*;*HD*
+;LR,EX:0;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_INNENKONTUR:
