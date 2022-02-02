@@ -6,3 +6,6 @@ Das Ziel dieses Buches ist die Vermittlung von Grundkenntnissen zur makrobasiert
 Das Buch ist für Mitarbeiterinnen und Mitarbeitern sowohl der Fertigung als auch der Arbeitsvorbereitung gedacht.
 Viele Fertigungsbeispiele, einschließlich der Shop-Mill-Programme in Kombination mit Grafiken und Erläuterungen, fördern den Erkenntnisprozess.
 Programmiert wird mit dem Programmiersystem „Sinumerik Operate“, Version „840D sl 4.7 SP4 HF6“ für die Werkzeugmaschine „C30 U“ der Firma „Hermle“ mit der Steuerung „SINUMERIK 840 D“.
+
+- Was ist zu beachten
+- 1) Herunterladen ders Werksückverzeichnisses "*.WPD"
