@@ -15,6 +15,3 @@ Programmiert wird mit dem Programmiersystem „Sinumerik Operate“, Version „
 5) Zielverzeichnis „NC“ auswählen: Softkey „NC“.
 6) Werkstücke in der Verzeichnisstruktur anwählen und Softkey „Einfügen“ betätigen.
 7) Werkstückverzeichnis „*.WPD“ mit Dateien bzw. Programmen „*.MPF“ erscheint.
-
-
-
