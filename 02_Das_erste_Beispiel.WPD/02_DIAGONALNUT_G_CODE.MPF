@@ -1,0 +1,17 @@
+N1 E_HEAD(8191,0,0,0,100,80,-15,71,17,1,60,1,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 T="FB_D16"       ; Bohrnutenfräser
+N3 M6               ; Werkzeug einwechseln
+N4 G0 Z300          ; Zur Rückzugsebene
+N5 S2387 F572 M3    ; Schnittwerte
+N6 G0 X25 Y15       ; Zum Startpunkt
+N7 G0 Z1            ; Zur Sicherheitsebene
+N8 G1 Z-2.5         ; Eintauchen
+N9 G1 RP=74 AP=42   ; Erster Vollschnitt
+N10 G1 Z-5          ; Erneute Zustellung
+N11 G1 X25 Y15      ; Zweiter Vollschnitt
+N12 G1 Z2           ; Zur Sicherheitsebene
+N13 G0 Z300         ; Zur Rückzugsebene
+N14 M5              ; Spindel halt
+N15 M30             ; Programmende
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
