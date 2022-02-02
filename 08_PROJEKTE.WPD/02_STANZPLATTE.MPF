@@ -1,0 +1,66 @@
+N1 E_HEAD(270540799,0,-35,1,100,70,-10,71,17,2,200,0,1,20,,1,7,6,100,1,0,33279);*RO*
+N2 GROUP_BEGIN(0,"TAV10 Planfräsen",0,0);*RO*
+N3 E_MI_PL("FP_D63_WSP","",1,0.1,2,200,2,9,1,90,0,90,5,0,0,90,-35,90,100,91,70,91,50,1,0);*RO*
+N4 GROUP_END(0,0);*RO*
+N5 GROUP_BEGIN(0,"TAV20 Außenkontur schruppen, Konturaufmaß 0.3, keine Bodenaufmaß",0,0);*RO*
+N6 E_CON("AUSSENKONTUR",1,"E_LAB_A_AUSSENKONTUR","E_LAB_E_AUSSENKONTUR");*RO*
+N7 E_MI_CON("FS_D25_VHM","",1,0.1,2,200,2,1,0,90,-5,91,5,0.3,0,0,10,41,16,6,0.1,0,1,2,91,,);*RO*
+N8 GROUP_END(0,0);*RO*
+N9 GROUP_BEGIN(0,"TAV30 Rechtecktasche fräsen",0,0);*RO*
+N10 E_PO_REC(4,0,0,"FB_D6","",1,0.08,2,160,2,1,0.5,2,1.5,0,90,3.5,91,2,1,60,90,-10,90,25,20,4,0,0,0,8,3,15,50,0,1,1,2,91);*RO*
+N11 GROUP_END(0,0);*RO*
+N12 GROUP_BEGIN(0,"TAV40 Längsnuten fräsen (tieferligende Ebenen beachten)",0,0);*RO*
+N13 E_SL_LON(1,0,0,"FB_D6","",1,0.08,2,160,2,1,5,2,-5,90,-7.5,90,2.5,1,74,90,-27.5,90,20,8,0,0,0,50,1,1,1,2,91);*RO*
+N14 _E_P005: E_PS_ROW(1,0,0,-5,90,74,90,-27.5,90,90,55,2,0,,0);*RO*
+N15 GROUP_END(0,0);*RO*
+N16 GROUP_BEGIN(0,"TAV 50 und TAV 60 Bohren d8 und Fasen 0.5x45°",0,0);*RO*
+N17 E_DR(1,0,0,"BS_D8_VHM","",1,0.2,3,80,2,-11,1,0,1,528);*RO*
+N18 E_DR_SIN(1,0,0,"BSe_D30_A90","",1,0.2,3,30,2,9,2,1,-1,16);*RO*
+N19 _E_P001: E_PS_CIR(1,0,0,0,90,32,,0,,15,45,30,4,0,0,,);*RO*
+N20 GROUP_END(0,0);*RO*
+N21 GROUP_BEGIN(0,"TAV70 Aussenkontur schlichten",0,0);*RO*
+N22 E_CON("AUSSENKONTUR_VVV",1,"E_LAB_A_AUSSENKONTUR_VVV","E_LAB_E_AUSSENKONTUR_VVV");*RO*
+N23 E_MI_CON("FS_D20_VHM","",1,0.08,2,250,2,2,0,90,-5,91,5,0.3,0,0,10,41,16,6,0.1,0,1,2,91,,);*RO*
+N24 GROUP_END(0,0);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_AUSSENKONTUR: ;#SM Z:4
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X95 Y-20 ;*GP*
+G1 X15 Y-24 ;*GP*
+G2 Y24 I=AC(47) J=AC(0) ;*GP*
+G1 X95 Y20 ;*GP*
+Y15 ;*GP*
+G3 Y-15 I=AC(115) J=AC(0) ;*GP*
+G1 Y-20 ;*GP*
+;CON,0,0.0000,5,5,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:95,EY:-20;*GP*;*RO*;*HD*
+;LA,EX:15,EY:-24;*GP*;*RO*;*HD*
+;ACW,DIA:7/17,EX:15,CY:0,RAD:40;*GP*;*RO*;*HD*
+;LA,EX:95,EY:20;*GP*;*RO*;*HD*
+;LD,EY:15;*GP*;*RO*;*HD*
+;ACCW,DIA:0/235,EX:95,EY:-15,RAD:25;*GP*;*RO*;*HD*
+;LD,EY:-20;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_AUSSENKONTUR:
+E_LAB_A_AUSSENKONTUR_VVV: ;#SM Z:2
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X95 Y-20 ;*GP*
+G1 X15 Y-24 ;*GP*
+G2 Y24 I=AC(47) J=AC(0) ;*GP*
+G1 X95 Y20 ;*GP*
+Y15 ;*GP*
+G3 Y-15 I=AC(115) J=AC(0) ;*GP*
+G1 Y-20 ;*GP*
+;CON,0,0.0000,2,2,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:95,EY:-20;*GP*;*RO*;*HD*
+;LA,EX:15,EY:-24;*GP*;*RO*;*HD*
+;ACW,DIA:7/17,EX:15,CY:0,RAD:40;*GP*;*RO*;*HD*
+;LA,EX:95,EY:20;*GP*;*RO*;*HD*
+;LD,EY:15;*GP*;*RO*;*HD*
+;ACCW,DIA:0/235,EX:95,EY:-15,RAD:25;*GP*;*RO*;*HD*
+;LD,EY:-20;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_AUSSENKONTUR_VVV:

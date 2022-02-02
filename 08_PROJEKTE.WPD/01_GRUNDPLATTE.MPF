@@ -1,0 +1,52 @@
+N1 E_HEAD(8191,-48,0,2,96,96,-16,71,17,2,10,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 E_MI_PL("FP_D63_WSP","",1,0.1,2,200,2,9,2,90,0,90,5,0,-48,90,0,90,96,91,96,91,50,1,0);*RO*
+N3 E_CON("AUSSENKONTUR",1,"E_LAB_A_AUSSENKONTUR","E_LAB_E_AUSSENKONTUR");*RO*
+N4 E_MI_CON("FS_D20_WSP","",1,0.08,2,160,2,1,0,90,-8,91,4,0.3,0,0,65,41,16,6,0.1,0,1,2,91,,);*RO*
+N5 E_MI_CON("FS_D20_VHM","",1,0.08,2,250,2,2,0,90,-8,91,8,0,0,16,20,41,16,6,0.1,0,1,2,91,,);*RO*
+N6 E_CON("HALBTASCHE",1,"E_LAB_A_HALBTASCHE","E_LAB_E_HALBTASCHE");*RO*
+N7 E_MI_CON("FS_D25_WSP","",1,0.08,2,160,2,1,0,90,-4,91,4,0,0,0,6,41,16,6,0.1,0,1,2,91,,);*RO*
+N8 E_DR(1,0,0,"BS_D8_VHM","",1,0.2,3,80,2,-17,1,0,1,528);*RO*
+N9 E_DR(1,0,0,"BSe_D14_A90","",1,0.2,3,30,2,-5,91,2,-1,528);*RO*
+N10 _E_P001: E_PS_SEQ(1,0,0,0,90,-28,90,48,90,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,0);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
+E_LAB_A_AUSSENKONTUR: ;#SM Z:4
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X42 Y35 ; Konturanfangspunkt ;*GP*
+G1 Y6 RND=12 ;*GP*
+X-42 RND=12 ;*GP*
+Y90 RND=12 ;*GP*
+X0 ;*GP*
+X30 Y80 ;*GP*
+Y35 RND=12 ;*GP*
+X42 ;*GP*
+;CON,0,0.0000,0,0,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:42,EY:35;*GP*;*RO*;*HD*
+;LD,EY:6;*GP*;*RO*;*HD*
+;R,RROUND:12;*GP*;*RO*;*HD*
+;LL,EX:-42;*GP*;*RO*;*HD*
+;R,RROUND:12;*GP*;*RO*;*HD*
+;LU,EY:90;*GP*;*RO*;*HD*
+;R,RROUND:12;*GP*;*RO*;*HD*
+;LR,EX:0;*GP*;*RO*;*HD*
+;LA,EX:30,EY:80;*GP*;*RO*;*HD*
+;LD,EY:35;*GP*;*RO*;*HD*
+;R,RROUND:12;*GP*;*RO*;*HD*
+;LR,EX:42;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_AUSSENKONTUR:
+E_LAB_A_HALBTASCHE: ;#SM Z:2
+;#7__DlgK contour definition begin - Don't change!;*GP*;*RO*;*HD*
+G17 G90 DIAMOF;*GP*
+G0 X15 Y6 ; Anfangspunkt, offenen Kontur ;*GP*
+G1 Y12 ;*GP*
+G3 X-15 I=AC(0) J=AC(12) ;*GP*
+G1 Y6 ;*GP*
+;CON,0,0.0000,3,3,MST:0,0,AX:X,Y,I,J,CYL:1,0,10,TRANS:1;*GP*;*RO*;*HD*
+;S,EX:15,EY:6;*GP*;*RO*;*HD*
+;LU,EY:12;*GP*;*RO*;*HD*
+;ACCW,EX:-15,EY:12,RAD:15;*GP*;*RO*;*HD*
+;LD,EY:6;*GP*;*RO*;*HD*
+;#End contour definition end - Don't change!;*GP*;*RO*;*HD*
+E_LAB_E_HALBTASCHE:
