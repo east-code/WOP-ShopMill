@@ -1,0 +1,43 @@
+; Kreistasche
+; Parameter definieren die Abmessungen der Tasche
+N100 DEF REAL Z_0=0  ; Referenz (abs)
+N101 DEF REAL D_T=40 ;Taschendurchmesser
+N102 DEF REAL t_T=45 ;Taschentiefe
+N103 DEF REAL z_St=2.5 ; Steigung, Zustellung/U = Schnittiefe 
+; --- Berechnungsparameter ---
+N104 DEF REAL R_T=0      ;Taschenradius r=D/2
+N105 DEF REAL Z_ist=0    ;Istposition in z
+N106 MSG("WZ-Radius: "<< $P_TOOLR)
+N107 ;Helix als Formelement
+N108 R_T= D_T / 2
+N109 ;--- Kontrolle der Restriktionen --------------------
+N110 if $P_TOOLR >= R_T
+N111    MSG("Werkzeugradius fuer Helixdurchmesser zu gross")
+N112    RET
+N113 Endif
+N114 if (2 * $P_TOOLR) <= R_T
+N115    MSG("Werkzeugradius fÃ¼r Helixdurchmesser zu klein")
+N116    RET
+N117 Endif
+N118 ;-----------------------------------------------------
+; Pol wird auf aktuelle Position gesetzt
+; Mittelpunkt ist x0 y0 lokal
+N119 G110 X=0 Y=0   
+N120 G0 Z=Z_0+1        ; Sicherheitsebene anfahren
+N121 Z_ist=Z_0+1       ;Startposition in Z
+; Einfahrradius wird optimiert
+N122 G41 G347 DisR= (R_T - $P_TOOLR) / 2
+N123    G1  RP=R_T AP=0  ;Erster Konturpunkt
+N124    REPEAT  ; Helix
+N125      Z_ist=Z_ist-z_St
+N126      G3  RP=R_T AP=0  Z=Z_ist
+N127    UNTIL (Z_ist<= (Z_0-t_T))
+        ; Boden nacharbeiten ohne Z-Zustellung
+N128    G3 RP=R_T AP=0 Z=Z_0 - t_T ;zwei UmlÃ¤ufe
+N129    G3 RP=R_T AP=0 Z=Z_0 - t_T
+; FrÃ¤serradienkorrektur aus und Ausfahrradius optimiert
+N130 G40 G348  DisR= (R_T - $P_TOOLR) / 2  
+N131 G0 RP=0  Z=Z_0+1      ;Zur Sicherheitsebene
+N132 RET
+N133 M17
+

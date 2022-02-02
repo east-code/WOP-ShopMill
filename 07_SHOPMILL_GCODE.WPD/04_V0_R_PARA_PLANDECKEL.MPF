@@ -1,0 +1,20 @@
+N1 E_HEAD(2105343,,,1,50,30,-15,71,17,2,100,0,0,20,,1,4,6,100,1,0,33279);*RO*
+; Parameter des Plandeckel
+N2 R0= 120  ; Länge L
+N3 R1= 80   ; Breite B
+N4 R2= 15   ; Fertigteilhöhe H
+N5 R3= 10.5 ; Bohrung d -> Werkzeugdurchmesser
+N6 R4= 10   ; Randabstand der Bohrungen a
+; Informationen für den Befiener
+N7 MSG("Länge L: " << R0 << "; Breite B: " << R1 << "; Höhe H: " << R2)
+N8 M0 ; Halt, weiter mit Starttaste
+; Rohteil neu parametrieren
+N9 E_CONFIG(2105343,17,2,80,0,0,,,1,R0,R1,-R2,1,4,6,100,,0,32768,,,,,,);*RO*
+; TAV 10: Planfräsen
+N10 E_MI_PL("FP_D63_WSP","",1,0.1,2,200,2,9,1,90,0,90,5,0,-R0/2,90,-R1/2,90,R0,91,R1,91,50,1,0);*RO*
+N11 GROUP_BEGIN(0,"TAV 20: Bohren mit Positionsmuster",0,0);*RO*
+N12 E_DR(1,0,0,"BS_D6.8_VHM","",1,0.14,3,90,2,-R1-1,0,0,1,528);*RO*
+N13 _E_P001: E_PS_FRA(1,0,0,0,90,-R0/2+R4,90,-R1/2+R4,90,0,(R0-2*R4)/2,3,R1-2*R4,2,0,0,0,);*RO*
+N14 GROUP_END(0,0);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*

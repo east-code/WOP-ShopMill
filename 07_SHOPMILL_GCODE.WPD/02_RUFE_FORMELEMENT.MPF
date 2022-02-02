@@ -1,0 +1,9 @@
+N1 E_HEAD(268443647,0,0,0,100,80,-15,71,17,1,10,0,0,20,,1,7,6,100,1,0,33279);*RO*
+; Programm ruft ein anderes Programm auf
+N2 Begin: ;#SM;*RO*
+N3 ATRANS X25 Y15 Z0 ;#SM;*RO*
+N4 CALL "02_FORMELEMENT_LNUT.MPF";#SM;*RO*
+N5 Ende: ;#SM;*RO*
+N6 REPEAT Begin Ende P=2 ;#SM;*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
