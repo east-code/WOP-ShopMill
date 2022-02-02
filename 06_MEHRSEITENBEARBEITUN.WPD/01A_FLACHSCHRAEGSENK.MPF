@@ -1,0 +1,11 @@
+N1 E_HEAD(268443647,0,0,0,120,70,-100,71,17,2,30,0,0,20,,1,7,6,100,1,0,33279);*RO*
+N2 T="FS_D20_WSP"    ; Flachsenkung Fräsen
+N3 M6                ; Werkzeugwechsel
+N4 G94 S2400 F600 M3 ; Schnittwerte
+N5 E_TCARR("TC1","FS_D20_WSP","",1,3,80,30,0,0,30,0,57,0,0,0,1,1,0,100);*RO*
+N6 G0 X-22 Y0 Z-5    ; Startpunkt
+N7 G1 X0             ; Senkung fräsen
+N8 G0 Z20          ; Rückzug
+N11 E_TCARR("TC1","BS_D12","",1,1,0,0,0,0,0,0,57,0,0,0,-1,1,0,100);*RO*
+E_END(0,1,0);*RO*
+M30 ;#SM;*RO*
