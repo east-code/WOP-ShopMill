@@ -8,8 +8,8 @@ Viele Fertigungsbeispiele, einschließlich der Shop-Mill-Programme in Kombinatio
 Programmiert wird mit dem Programmiersystem „Sinumerik Operate“, Version „840D sl 4.7 SP4 HF6“ für die Werkzeugmaschine „C30 U“ der Firma „Hermle“ mit der Steuerung „SINUMERIK 840 D“.
 
 ## Was ist zu beachten:
-1) Herunterladen der Werkstückverzeichnis "*.WPD" auf einen externen Datenträger (Datenstick).
-    Code --> Download ZIP --> Kopieren und endpacken
+1) Herunterladen der Werkstückverzeichnisse "*.WPD" auf einen externen Datenträger (Datenstick).
+- Code --> Download ZIP --> Kopieren --> Entpacken
 2)  Sinutrain starten und Programmmanager aufrufen.
 3)  Externen Datenträger anwählen: Softkey „USB“. -> Verzeichnis erscheint.
 4) Werkstückverzeichnis auswählen und kopieren: Softkey „Kopieren“.
